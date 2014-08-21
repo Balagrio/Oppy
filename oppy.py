@@ -26,3 +26,7 @@ xmax[4] = float(raw_input("Maximaler Winkel R2: "))
 
 # Startpunkt
 x0      = [(xmax[0]-xmin[0])/2, (xmax[1]-xmin[1])/2, (xmax[2]-xmin[2])/2, (xmax[3]-xmin[3])/2, (xmax[4]-xmin[4])/2]
+
+# Konfiguration 'basinhopping' mit Grenzen
+bounds  = [(low, high) for low, high in zip(xmin, xmax)]
+minimizer_kwargs = dict(method="L-BFGS-B", bounds=bounds)
