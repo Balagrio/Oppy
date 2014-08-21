@@ -30,3 +30,8 @@ x0      = [(xmax[0]-xmin[0])/2, (xmax[1]-xmin[1])/2, (xmax[2]-xmin[2])/2, (xmax[
 # Konfiguration 'basinhopping' mit Grenzen
 bounds  = [(low, high) for low, high in zip(xmin, xmax)]
 minimizer_kwargs = dict(method="L-BFGS-B", bounds=bounds)
+
+# Optimierung
+ret = optimize.basinhopping(ffun, x0, minimizer_kwargs=minimizer_kwargs, niter=10) 
+print("====================================================")
+print("x = [%.4f, %.4f, %.4f, %.4f, %.4f], f(x) = %.4f" % (ret.x[0], ret.x[1], ret.x[2], ret.x[3], ret.x[4], ret.fun*(-1)))
