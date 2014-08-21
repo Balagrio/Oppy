@@ -23,3 +23,6 @@ xmin[3] = float(raw_input("Minimaler Winkel R1: "))
 xmax[3] = float(raw_input("Maximaler Winkel R1: "))
 xmin[4] = float(raw_input("Minimaler Winkel R2: "))
 xmax[4] = float(raw_input("Maximaler Winkel R2: "))
+
+# Startpunkt
+x0      = [(xmax[0]-xmin[0])/2, (xmax[1]-xmin[1])/2, (xmax[2]-xmin[2])/2, (xmax[3]-xmin[3])/2, (xmax[4]-xmin[4])/2]
