@@ -4,7 +4,7 @@ from oct2py import octave
 from scipy import optimize
 
 # Fitnessfunktion
-def ffun(x): return octave.call("myfun.m", x)*(-1)
+def ffun(x): return octave.myfun(x)*(-1)
 
 # Grenzen, z.B.
 #xmin    = [10.,3.,2.,0.05,0.05]
